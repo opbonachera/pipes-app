@@ -1,0 +1,47 @@
+<p-panel header="Number pipes" class="m-2">
+    <p>Pipes included in Angular. Usually in the common module.</p>
+</p-panel>
+
+<div class="grid m-2">
+
+        <div class="col-12 md:col-4">
+            <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+                <p>Welcome, {{ name }}. Nice to meet you. {{ gender | i18nSelect: invitationMap }}</p>
+                <p-button
+                    (click)="changeClient()"
+                    label="Change user">
+                </p-button>
+            </p-fieldset>
+        </div>
+
+        <div class="col-12 md:col-4">
+            <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+                <p>{{ clients.length }} {{ clients.length | i18nPlural:clientsMap }}  on the queue.</p>
+                <p-button (click)="removeClient()"label="Remove Client"></p-button>
+            </p-fieldset>
+        </div>
+
+        <div class="col-12 md:col-4">
+            <p-fieldset legend="Slice Pipe" [toggleable]="true">
+                <p>Slice Pipe</p>
+                <pre>{{ clients | slice:0:2 }}</pre>
+            </p-fieldset>
+        </div>
+
+        <div class="col-12 md:col-4">
+            <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+                <li *ngFor="let item of person | keyvalue">{{item.key | titlecase}} : {{item.value}}</li>
+            </p-fieldset>
+        </div>
+
+        <div class="col-12 md:col-4">
+            <p-fieldset legend="Async Pipe" [toggleable]="true"></p-fieldset>
+        </div>
+
+        <div class="col-12 md:col-4">
+            <p-fieldset legend="JSON Pipe" [toggleable]="true">
+                <pre>{{ myObservableTimer | async }}</pre>
+            </p-fieldset>
+        </div>
+        
+</div>
