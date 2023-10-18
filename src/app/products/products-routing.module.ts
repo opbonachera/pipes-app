@@ -4,7 +4,7 @@ import { ProductsComponent } from './products.component';
 import { FundamentalsPageComponent } from './pages/fundamentals-page/fundamentals-page.component';
 import { NumbersPageComponent } from './pages/numbers-page/numbers-page.component';
 import { UncommonPageComponent } from './pages/uncommon-page/uncommon-page.component';
-
+import { OrderComponent } from './pages/order/order.component';
 const routes: Routes = [
   { 
     path: '', component: ProductsComponent 
@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   { 
     path:'uncommon', component: UncommonPageComponent
+  },
+  { 
+    path:'custom', component: OrderComponent
   }
 ];
 
